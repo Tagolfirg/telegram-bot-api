@@ -1,9 +1,9 @@
 <?php
 
-namespace TelegramBot\Api\Test;
+namespace YaroslavMolchan\TelegramBotApi\Test;
 
 
-use TelegramBot\Api\Types\Location;
+use YaroslavMolchan\TelegramBotApi\Types\Location;
 
 class LocationTest extends \PHPUnit_Framework_TestCase
 {
@@ -38,13 +38,13 @@ class LocationTest extends \PHPUnit_Framework_TestCase
     public function testFromResponse()
     {
         $location = Location::fromResponse(array("latitude" => 55.585827, 'longitude' => 37.675309));
-        $this->assertInstanceOf('\TelegramBot\Api\Types\Location', $location);
+        $this->assertInstanceOf('\YaroslavMolchan\TelegramBotApi\Types\Location', $location);
         $this->assertAttributeEquals(55.585827, 'latitude', $location);
         $this->assertAttributeEquals(37.675309, 'longitude', $location);
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testSetLatitudeException()
     {
@@ -52,7 +52,7 @@ class LocationTest extends \PHPUnit_Framework_TestCase
         $item->setLatitude('s');
     }
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testSetLongitudeException()
     {

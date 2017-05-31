@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Api;
+namespace YaroslavMolchan\TelegramBotApi;
 
 interface TypeInterface
 {

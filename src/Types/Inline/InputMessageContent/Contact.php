@@ -6,11 +6,11 @@
  * Time: 16:01
  */
 
-namespace TelegramBot\Api\Types\Inline\InputMessageContent;
+namespace YaroslavMolchan\TelegramBotApi\Types\Inline\InputMessageContent;
 
-use TelegramBot\Api\BaseType;
-use TelegramBot\Api\TypeInterface;
-use TelegramBot\Api\Types\Inline\InputMessageContent;
+use YaroslavMolchan\TelegramBotApi\BaseType;
+use YaroslavMolchan\TelegramBotApi\TypeInterface;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InputMessageContent;
 
 /**
  * Class Contact
@@ -18,7 +18,7 @@ use TelegramBot\Api\Types\Inline\InputMessageContent;
  * @see https://core.telegram.org/bots/api#inputcontactmessagecontent
  * Represents the content of a contact message to be sent as the result of an inline query.
  *
- * @package TelegramBot\Api\Types\Inline
+ * @package YaroslavMolchan\TelegramBotApi\Types\Inline
  */
 class Contact extends InputMessageContent implements TypeInterface
 {

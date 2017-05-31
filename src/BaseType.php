@@ -1,12 +1,12 @@
 <?php
 
-namespace TelegramBot\Api;
+namespace YaroslavMolchan\TelegramBotApi;
 
 /**
  * Class BaseType
  * Base class for Telegram Types
  *
- * @package TelegramBot\Api
+ * @package YaroslavMolchan\TelegramBotApi
  */
 abstract class BaseType
 {

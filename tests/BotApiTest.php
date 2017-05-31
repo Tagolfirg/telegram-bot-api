@@ -1,10 +1,10 @@
 <?php
 
-namespace TelegramBot\Api\Test;
+namespace YaroslavMolchan\TelegramBotApi\Test;
 
-use TelegramBot\Api\BotApi;
-use TelegramBot\Api\Types\ArrayOfUpdates;
-use TelegramBot\Api\Types\Update;
+use YaroslavMolchan\TelegramBotApi\BotApi;
+use YaroslavMolchan\TelegramBotApi\Types\ArrayOfUpdates;
+use YaroslavMolchan\TelegramBotApi\Types\Update;
 
 class BotApiTest extends \PHPUnit_Framework_TestCase
 {
@@ -107,7 +107,7 @@ class BotApiTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetUpdates($updates)
     {
-        $mock = $this->getMockBuilder('\TelegramBot\Api\BotApi')
+        $mock = $this->getMockBuilder('\YaroslavMolchan\TelegramBotApi\BotApi')
             ->setMethods(['call'])
             ->enableOriginalConstructor()
             ->setConstructorArgs(['testToken'])
@@ -123,7 +123,7 @@ class BotApiTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expectedResult, $result);
 
         foreach($result as $key => $item) {
-            $this->assertInstanceOf('\TelegramBot\Api\Types\Update', $item);
+            $this->assertInstanceOf('\YaroslavMolchan\TelegramBotApi\Types\Update', $item);
             $this->assertEquals($expectedResult[$key], $item);
         }
     }

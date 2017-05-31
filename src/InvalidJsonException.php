@@ -1,12 +1,12 @@
 <?php
 
-namespace TelegramBot\Api;
+namespace YaroslavMolchan\TelegramBotApi;
 
 /**
  * Class InvalidJsonException
  *
  * @codeCoverageIgnore
- * @package TelegramBot\Api
+ * @package YaroslavMolchan\TelegramBotApi
  */
 class InvalidJsonException extends Exception
 {

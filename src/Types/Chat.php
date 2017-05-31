@@ -1,10 +1,10 @@
 <?php
 
-namespace TelegramBot\Api\Types;
+namespace YaroslavMolchan\TelegramBotApi\Types;
 
-use TelegramBot\Api\BaseType;
-use TelegramBot\Api\InvalidArgumentException;
-use TelegramBot\Api\TypeInterface;
+use YaroslavMolchan\TelegramBotApi\BaseType;
+use YaroslavMolchan\TelegramBotApi\InvalidArgumentException;
+use YaroslavMolchan\TelegramBotApi\TypeInterface;
 
 class Chat extends BaseType implements TypeInterface
 {

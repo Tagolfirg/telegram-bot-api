@@ -1,12 +1,12 @@
 <?php
 
-namespace TelegramBot\Api;
+namespace YaroslavMolchan\TelegramBotApi;
 
 /**
  * Class InvalidArgumentException
  *
  * @codeCoverageIgnore
- * @package TelegramBot\Api
+ * @package YaroslavMolchan\TelegramBotApi
  */
 class InvalidArgumentException extends Exception
 {

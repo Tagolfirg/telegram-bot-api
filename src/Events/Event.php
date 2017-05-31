@@ -1,9 +1,9 @@
 <?php
 
-namespace TelegramBot\Api\Events;
+namespace YaroslavMolchan\TelegramBotApi\Events;
 
-use TelegramBot\Api\Types\Message;
-use TelegramBot\Api\Types\Update;
+use YaroslavMolchan\TelegramBotApi\Types\Message;
+use YaroslavMolchan\TelegramBotApi\Types\Update;
 
 class Event
 {
@@ -46,7 +46,7 @@ class Event
     }
 
     /**
-     * @param \TelegramBot\Api\Types\Update
+     * @param \YaroslavMolchan\TelegramBotApi\Types\Update
      *
      * @return mixed
      */
@@ -60,7 +60,7 @@ class Event
     }
 
     /**
-     * @param \TelegramBot\Api\Types\Update
+     * @param \YaroslavMolchan\TelegramBotApi\Types\Update
      *
      * @return mixed
      */

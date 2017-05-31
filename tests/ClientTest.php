@@ -1,14 +1,14 @@
 <?php
 
-namespace TelegramBot\Api\Test;
+namespace YaroslavMolchan\TelegramBotApi\Test;
 
 
 use Symfony\Component\Yaml\Inline;
-use TelegramBot\Api\BotApi;
-use TelegramBot\Api\Client;
-use TelegramBot\Api\Types\Inline\InlineQuery;
-use TelegramBot\Api\Types\Message;
-use TelegramBot\Api\Types\Update;
+use YaroslavMolchan\TelegramBotApi\BotApi;
+use YaroslavMolchan\TelegramBotApi\Client;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InlineQuery;
+use YaroslavMolchan\TelegramBotApi\Types\Message;
+use YaroslavMolchan\TelegramBotApi\Types\Update;
 
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
@@ -123,7 +123,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetInlineQueryChecker($update)
     {
-        $reflectionMethod = new \ReflectionMethod('TelegramBot\Api\Client', 'getInlineQueryChecker');
+        $reflectionMethod = new \ReflectionMethod('YaroslavMolchan\TelegramBotApi\Client', 'getInlineQueryChecker');
         $reflectionMethod->setAccessible(true);
 
         $result = $reflectionMethod->invoke(null);
@@ -134,7 +134,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException        \TelegramBot\Api\BadMethodCallException
+     * @expectedException        \YaroslavMolchan\TelegramBotApi\BadMethodCallException
      * @expectedExceptionMessage Method testMethod not exists
      */
     public function testBadMethodCallException()
@@ -148,16 +148,16 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     {
         $item = new Client('testToken');
 
-        $this->assertInstanceOf('\TelegramBot\Api\Client', $item);
-        $this->assertAttributeInstanceOf('\TelegramBot\Api\BotApi', 'api', $item);
-        $this->assertAttributeInstanceOf('\TelegramBot\Api\Events\EventCollection', 'events', $item);
+        $this->assertInstanceOf('\YaroslavMolchan\TelegramBotApi\Client', $item);
+        $this->assertAttributeInstanceOf('\YaroslavMolchan\TelegramBotApi\BotApi', 'api', $item);
+        $this->assertAttributeInstanceOf('\YaroslavMolchan\TelegramBotApi\Events\EventCollection', 'events', $item);
     }
 
     public function testOn()
     {
         $item = new Client('testToken');
 
-        $mockedEventCollection = $this->getMockBuilder('\TelegramBot\Api\Events\EventCollection')
+        $mockedEventCollection = $this->getMockBuilder('\YaroslavMolchan\TelegramBotApi\Events\EventCollection')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -182,7 +182,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetChecker($update, $command)
     {
-        $reflectionMethod = new \ReflectionMethod('TelegramBot\Api\Client', 'getChecker');
+        $reflectionMethod = new \ReflectionMethod('YaroslavMolchan\TelegramBotApi\Client', 'getChecker');
         $reflectionMethod->setAccessible(true);
 
         $result = $reflectionMethod->invoke(null, $command);
@@ -206,7 +206,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     {
         $item = new Client('testToken');
 
-        $mockedEventCollection = $this->getMockBuilder('\TelegramBot\Api\Events\EventCollection')
+        $mockedEventCollection = $this->getMockBuilder('\YaroslavMolchan\TelegramBotApi\Events\EventCollection')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -229,7 +229,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetEvent($update, $command, $attr1, $attr2)
     {
-        $reflectionMethod = new \ReflectionMethod('TelegramBot\Api\Client', 'getEvent');
+        $reflectionMethod = new \ReflectionMethod('YaroslavMolchan\TelegramBotApi\Client', 'getEvent');
         $reflectionMethod->setAccessible(true);
         global $test;
 
@@ -274,7 +274,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetInlineQueryEvent($update)
     {
-        $reflectionMethod = new \ReflectionMethod('TelegramBot\Api\Client', 'getInlineQueryEvent');
+        $reflectionMethod = new \ReflectionMethod('YaroslavMolchan\TelegramBotApi\Client', 'getInlineQueryEvent');
         $reflectionMethod->setAccessible(true);
         global $test;
 

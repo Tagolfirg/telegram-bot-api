@@ -1,9 +1,9 @@
 <?php
 
-namespace TelegramBot\Api\Test\Types\Inline;
+namespace YaroslavMolchan\TelegramBotApi\Test\Types\Inline;
 
-use TelegramBot\Api\Types\Inline\InlineQuery;
-use TelegramBot\Api\Types\User;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InlineQuery;
+use YaroslavMolchan\TelegramBotApi\Types\User;
 
 class InlineQueryTest extends \PHPUnit_Framework_TestCase
 {
@@ -25,7 +25,7 @@ class InlineQueryTest extends \PHPUnit_Framework_TestCase
 
         $user = User::fromResponse($this->inlineQueryFixture['from']);
 
-        $this->assertInstanceOf('\TelegramBot\Api\Types\Inline\InlineQuery', $item);
+        $this->assertInstanceOf('\YaroslavMolchan\TelegramBotApi\Types\Inline\InlineQuery', $item);
         $this->assertEquals(1, $item->getId());
         $this->assertEquals($user, $item->getFrom());
         $this->assertEquals('20', $item->getOffset());
@@ -38,14 +38,14 @@ class InlineQueryTest extends \PHPUnit_Framework_TestCase
 
         $user = User::fromResponse($this->inlineQueryFixture['from']);
 
-        $this->assertInstanceOf('\TelegramBot\Api\Types\Inline\InlineQuery', $item);
+        $this->assertInstanceOf('\YaroslavMolchan\TelegramBotApi\Types\Inline\InlineQuery', $item);
         $this->assertEquals(1, $item->getId());
         $this->assertEquals($user, $item->getFrom());
         $this->assertEquals('', $item->getOffset());
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testFromResponseException1() {
         unset($this->inlineQueryFixture['id']);
@@ -53,7 +53,7 @@ class InlineQueryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testFromResponseException2() {
         unset($this->inlineQueryFixture['from']);
@@ -61,7 +61,7 @@ class InlineQueryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testFromResponseException3() {
         unset($this->inlineQueryFixture['query']);
@@ -69,7 +69,7 @@ class InlineQueryTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testFromResponseException4() {
         unset($this->inlineQueryFixture['offset']);

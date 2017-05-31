@@ -1,16 +1,16 @@
 <?php
 
-namespace TelegramBot\Api\Types;
+namespace YaroslavMolchan\TelegramBotApi\Types;
 
-use TelegramBot\Api\BaseType;
-use TelegramBot\Api\InvalidArgumentException;
-use TelegramBot\Api\TypeInterface;
+use YaroslavMolchan\TelegramBotApi\BaseType;
+use YaroslavMolchan\TelegramBotApi\InvalidArgumentException;
+use YaroslavMolchan\TelegramBotApi\TypeInterface;
 
 /**
  * Class Audio
  * This object represents an audio file (voice note).
  *
- * @package TelegramBot\Api\Types
+ * @package YaroslavMolchan\TelegramBotApi\Types
  */
 class Audio extends BaseType implements TypeInterface
 {

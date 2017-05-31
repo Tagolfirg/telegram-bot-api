@@ -6,16 +6,16 @@
  * Time: 13:55
  */
 
-namespace TelegramBot\Api\Types;
+namespace YaroslavMolchan\TelegramBotApi\Types;
 
-use TelegramBot\Api\BaseType;
-use TelegramBot\Api\TypeInterface;
+use YaroslavMolchan\TelegramBotApi\BaseType;
+use YaroslavMolchan\TelegramBotApi\TypeInterface;
 
 /**
  * Class Venue
  * This object represents a venue
  *
- * @package TelegramBot\Api\Types
+ * @package YaroslavMolchan\TelegramBotApi\Types
  */
 class Venue extends BaseType implements TypeInterface
 {

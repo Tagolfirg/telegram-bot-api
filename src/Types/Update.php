@@ -1,18 +1,18 @@
 <?php
 
-namespace TelegramBot\Api\Types;
+namespace YaroslavMolchan\TelegramBotApi\Types;
 
-use TelegramBot\Api\BaseType;
-use TelegramBot\Api\TypeInterface;
-use TelegramBot\Api\Types\Inline\ChosenInlineResult;
-use TelegramBot\Api\Types\Inline\InlineQuery;
+use YaroslavMolchan\TelegramBotApi\BaseType;
+use YaroslavMolchan\TelegramBotApi\TypeInterface;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\ChosenInlineResult;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InlineQuery;
 
 /**
  * Class Update
  * This object represents an incoming update.
  * Only one of the optional parameters can be present in any given update.
  *
- * @package TelegramBot\Api\Types
+ * @package YaroslavMolchan\TelegramBotApi\Types
  */
 class Update extends BaseType implements TypeInterface
 {
@@ -56,21 +56,21 @@ class Update extends BaseType implements TypeInterface
     /**
      * Optional. New incoming inline query
      *
-     * @var \TelegramBot\Api\Types\Inline\InlineQuery
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Inline\InlineQuery
      */
     protected $inlineQuery;
 
     /**
      * Optional. The result of a inline query that was chosen by a user and sent to their chat partner
      *
-     * @var \TelegramBot\Api\Types\Inline\ChosenInlineResult
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Inline\ChosenInlineResult
      */
     protected $chosenInlineResult;
 
     /**
      * Optional. New incoming callback query
      *
-     * @var \TelegramBot\Api\Types\CallbackQuery
+     * @var \YaroslavMolchan\TelegramBotApi\Types\CallbackQuery
      */
     protected $callbackQuery;
 

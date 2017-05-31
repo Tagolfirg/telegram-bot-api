@@ -1,5 +1,5 @@
 {
-    "name": "telegram-bot/api",
+    "name": "yaroslavmolchan/telegram-bot-api",
     "description": "PHP Wrapper for Telegram Bot API",
     "keywords": [
         "php",
@@ -7,13 +7,13 @@
         "bot",
         "bot api"
     ],
-    "homepage": "https://github.com/TelegramBot/Api",
+    "homepage": "https://github.com/YaroslavMolchan/telegram-bot-api",
     "license": "MIT",
     "authors": [
         {
-            "name": "Ilya Gusev",
-            "email": "mail@igusev.ru",
-            "homepage": "https://php-cat.com",
+            "name": "Yaroslav Molchan",
+            "email": "yaroslav@molchan.me",
+            "homepage": "https://molchan.me",
             "role": "Developer"
         }
     ],
@@ -22,17 +22,16 @@
     },
     "require-dev": {
         "phpunit/phpunit" : "4.*",
-        "squizlabs/php_codesniffer": "2.*",
-        "codeception/codeception": "*"
+        "squizlabs/php_codesniffer": "2.*"
     },
     "autoload": {
         "psr-4": {
-            "TelegramBot\\Api\\": "src"
+            "YaroslavMolchan\\TelegramBotApi\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TelegramBot\\Api\\Test\\": "tests"
+            "YaroslavMolchan\\TelegramBotApi\\Test\\": "tests"
         }
     },
     "scripts": {

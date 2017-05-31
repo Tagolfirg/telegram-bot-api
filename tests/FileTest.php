@@ -1,7 +1,7 @@
 <?php
-namespace TelegramBot\Api\Test;
+namespace YaroslavMolchan\TelegramBotApi\Test;
 
-use TelegramBot\Api\Types\File;
+use YaroslavMolchan\TelegramBotApi\Types\File;
 
 class FileTest extends \PHPUnit_Framework_TestCase
 {
@@ -54,14 +54,14 @@ class FileTest extends \PHPUnit_Framework_TestCase
             'file_size' => 3,
             'file_path' => 'testfilepath'
         ));
-        $this->assertInstanceOf('\TelegramBot\Api\Types\File', $item);
+        $this->assertInstanceOf('\YaroslavMolchan\TelegramBotApi\Types\File', $item);
         $this->assertAttributeEquals('testFileId1', 'fileId', $item);
         $this->assertAttributeEquals(3, 'fileSize', $item);
         $this->assertAttributeEquals('testfilepath', 'filePath', $item);
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testFromResponseException()
     {
@@ -72,7 +72,7 @@ class FileTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testSetFileSizeException()
     {

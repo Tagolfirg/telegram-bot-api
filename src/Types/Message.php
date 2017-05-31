@@ -1,9 +1,9 @@
 <?php
-namespace TelegramBot\Api\Types;
+namespace YaroslavMolchan\TelegramBotApi\Types;
 
-use TelegramBot\Api\BaseType;
-use TelegramBot\Api\InvalidArgumentException;
-use TelegramBot\Api\TypeInterface;
+use YaroslavMolchan\TelegramBotApi\BaseType;
+use YaroslavMolchan\TelegramBotApi\InvalidArgumentException;
+use YaroslavMolchan\TelegramBotApi\TypeInterface;
 
 class Message extends BaseType implements TypeInterface
 {
@@ -62,7 +62,7 @@ class Message extends BaseType implements TypeInterface
     /**
      * Optional. Sender name. Can be empty for messages sent to channels
      *
-     * @var \TelegramBot\Api\Types\User
+     * @var \YaroslavMolchan\TelegramBotApi\Types\User
      */
     protected $from;
 
@@ -76,14 +76,14 @@ class Message extends BaseType implements TypeInterface
     /**
      * Conversation the message belongs to — user in case of a private message, GroupChat in case of a group
      *
-     * @var \TelegramBot\Api\Types\Chat
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Chat
      */
     protected $chat;
 
     /**
      * Optional. For forwarded messages, sender of the original message
      *
-     * @var \TelegramBot\Api\Types\User
+     * @var \YaroslavMolchan\TelegramBotApi\Types\User
      */
     protected $forwardFrom;
 
@@ -98,7 +98,7 @@ class Message extends BaseType implements TypeInterface
      * Optional. For replies, the original message. Note that the Message object in this field will not contain further
      * reply_to_message fields even if it itself is a reply.
      *
-     * @var \TelegramBot\Api\Types\Message
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Message
      */
     protected $replyToMessage;
 
@@ -111,7 +111,7 @@ class Message extends BaseType implements TypeInterface
 
     /**
      * Optional. For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text.
-     * array of \TelegramBot\Api\Types\MessageEntity
+     * array of \YaroslavMolchan\TelegramBotApi\Types\MessageEntity
      *
      * @var array
      */
@@ -120,20 +120,20 @@ class Message extends BaseType implements TypeInterface
     /**
      * Optional. Message is an audio file, information about the file
      *
-     * @var \TelegramBot\Api\Types\Audio
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Audio
      */
     protected $audio;
 
     /**
      * Optional. Message is a general file, information about the file
      *
-     * @var \TelegramBot\Api\Types\Document
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Document
      */
     protected $document;
 
     /**
      * Optional. Message is a photo, available sizes of the photo
-     * array of \TelegramBot\Api\Types\Photo
+     * array of \YaroslavMolchan\TelegramBotApi\Types\Photo
      *
      * @var array
      */
@@ -142,56 +142,56 @@ class Message extends BaseType implements TypeInterface
     /**
      * Optional. Message is a sticker, information about the sticker
      *
-     * @var \TelegramBot\Api\Types\Sticker
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Sticker
      */
     protected $sticker;
 
     /**
      * Optional. Message is a video, information about the video
      *
-     * @var \TelegramBot\Api\Types\Video
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Video
      */
     protected $video;
 
     /**
      * Optional. Message is a voice message, information about the file
      *
-     * @var \TelegramBot\Api\Types\Voice
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Voice
      */
     protected $voice;
 
     /**
      * Optional. Message is a shared contact, information about the contact
      *
-     * @var \TelegramBot\Api\Types\Contact
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Contact
      */
     protected $contact;
 
     /**
      * Optional. Message is a shared location, information about the location
      *
-     * @var \TelegramBot\Api\Types\Location
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Location
      */
     protected $location;
 
     /**
      * Optional. Message is a venue, information about the venue
      *
-     * @var \TelegramBot\Api\Types\Venue
+     * @var \YaroslavMolchan\TelegramBotApi\Types\Venue
      */
     protected $venue;
 
     /**
      * Optional. A new member was added to the group, information about them (this member may be bot itself)
      *
-     * @var \TelegramBot\Api\Types\User
+     * @var \YaroslavMolchan\TelegramBotApi\Types\User
      */
     protected $newChatMember;
 
     /**
      * Optional. A member was removed from the group, information about them (this member may be bot itself)
      *
-     * @var \TelegramBot\Api\Types\User
+     * @var \YaroslavMolchan\TelegramBotApi\Types\User
      */
     protected $leftChatMember;
 

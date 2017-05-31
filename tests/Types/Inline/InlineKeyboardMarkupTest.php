@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Api\Test\Types\Inline;
+namespace YaroslavMolchan\TelegramBotApi\Test\Types\Inline;
 
-use TelegramBot\Api\Types\Inline\InlineKeyboardMarkup;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InlineKeyboardMarkup;
 
 class InlineKeyboardMarkupTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace TelegramBot\Api\Test;
+namespace YaroslavMolchan\TelegramBotApi\Test;
 
-use TelegramBot\Api\Types\PhotoSize;
-use TelegramBot\Api\Types\Video;
+use YaroslavMolchan\TelegramBotApi\Types\PhotoSize;
+use YaroslavMolchan\TelegramBotApi\Types\Video;
 
 class VideoTest extends \PHPUnit_Framework_TestCase
 {
@@ -87,7 +87,7 @@ class VideoTest extends \PHPUnit_Framework_TestCase
         ));
         $item->setThumb($thumb);
         $this->assertEquals($thumb, $item->getThumb());
-        $this->assertInstanceOf('\TelegramBot\Api\Types\PhotoSize', $item->getThumb());
+        $this->assertInstanceOf('\YaroslavMolchan\TelegramBotApi\Types\PhotoSize', $item->getThumb());
     }
 
     public function testSetWidth()
@@ -140,7 +140,7 @@ class VideoTest extends \PHPUnit_Framework_TestCase
             'height' => 6,
             'file_size' => 7
         ));
-        $this->assertInstanceOf('\TelegramBot\Api\Types\Video', $item);
+        $this->assertInstanceOf('\YaroslavMolchan\TelegramBotApi\Types\Video', $item);
         $this->assertAttributeEquals('testFileId1', 'fileId', $item);
         $this->assertAttributeEquals(1, 'width', $item);
         $this->assertAttributeEquals(2, 'height', $item);
@@ -148,11 +148,11 @@ class VideoTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('video/mp4', 'mimeType', $item);
         $this->assertAttributeEquals(4, 'fileSize', $item);
         $this->assertAttributeEquals($thumb, 'thumb', $item);
-        $this->assertInstanceOf('\TelegramBot\Api\Types\PhotoSize', $item->getThumb());
+        $this->assertInstanceOf('\YaroslavMolchan\TelegramBotApi\Types\PhotoSize', $item->getThumb());
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testSetHeightException()
     {
@@ -161,7 +161,7 @@ class VideoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testSetWidthException()
     {
@@ -170,7 +170,7 @@ class VideoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testSetDurationException()
     {
@@ -178,7 +178,7 @@ class VideoTest extends \PHPUnit_Framework_TestCase
         $item->setDuration('s');
     }
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testSetFileSizeException()
     {
@@ -187,7 +187,7 @@ class VideoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testFromResponseException1()
     {
@@ -206,7 +206,7 @@ class VideoTest extends \PHPUnit_Framework_TestCase
         ));
     }
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testFromResponseException2()
     {
@@ -226,7 +226,7 @@ class VideoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testFromResponseException3()
     {
@@ -246,7 +246,7 @@ class VideoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testFromResponseException4()
     {

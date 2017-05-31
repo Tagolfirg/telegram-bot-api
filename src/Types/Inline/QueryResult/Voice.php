@@ -6,10 +6,10 @@
  * Time: 02:12
  */
 
-namespace TelegramBot\Api\Types\Inline\QueryResult;
+namespace YaroslavMolchan\TelegramBotApi\Types\Inline\QueryResult;
 
-use TelegramBot\Api\Types\Inline\InlineKeyboardMarkup;
-use TelegramBot\Api\Types\Inline\InputMessageContent;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InlineKeyboardMarkup;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InputMessageContent;
 
 /**
  * Class Voice
@@ -20,7 +20,7 @@ use TelegramBot\Api\Types\Inline\InputMessageContent;
  *
  * Note: This will only work in Telegram versions released after 9 April, 2016. Older clients will ignore them.
  *
- * @package TelegramBot\Api\Types\Inline\QueryResult
+ * @package YaroslavMolchan\TelegramBotApi\Types\Inline\QueryResult
  */
 class Voice extends AbstractInlineQueryResult
 {

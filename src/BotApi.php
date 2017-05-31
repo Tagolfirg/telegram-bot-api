@@ -1,19 +1,19 @@
 <?php
 
-namespace TelegramBot\Api;
+namespace YaroslavMolchan\TelegramBotApi;
 
-use TelegramBot\Api\Types\ArrayOfUpdates;
-use TelegramBot\Api\Types\File;
-use TelegramBot\Api\Types\Inline\QueryResult\AbstractInlineQueryResult;
-use TelegramBot\Api\Types\Message;
-use TelegramBot\Api\Types\Update;
-use TelegramBot\Api\Types\User;
-use TelegramBot\Api\Types\UserProfilePhotos;
+use YaroslavMolchan\TelegramBotApi\Types\ArrayOfUpdates;
+use YaroslavMolchan\TelegramBotApi\Types\File;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\QueryResult\AbstractInlineQueryResult;
+use YaroslavMolchan\TelegramBotApi\Types\Message;
+use YaroslavMolchan\TelegramBotApi\Types\Update;
+use YaroslavMolchan\TelegramBotApi\Types\User;
+use YaroslavMolchan\TelegramBotApi\Types\UserProfilePhotos;
 
 /**
  * Class BotApi
  *
- * @package TelegramBot\Api
+ * @package YaroslavMolchan\TelegramBotApi
  */
 class BotApi
 {
@@ -132,7 +132,7 @@ class BotApi
     /**
      * Botan tracker
      *
-     * @var \TelegramBot\Api\Botan
+     * @var \YaroslavMolchan\TelegramBotApi\Botan
      */
     protected $tracker;
 
@@ -189,9 +189,9 @@ class BotApi
      * @param array|null $data
      *
      * @return mixed
-     * @throws \TelegramBot\Api\Exception
-     * @throws \TelegramBot\Api\HttpException
-     * @throws \TelegramBot\Api\InvalidJsonException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
+     * @throws \YaroslavMolchan\TelegramBotApi\HttpException
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidJsonException
      */
     public function call($method, array $data = null)
     {
@@ -231,7 +231,7 @@ class BotApi
      *
      * @return string
      *
-     * @throws \TelegramBot\Api\HttpException
+     * @throws \YaroslavMolchan\TelegramBotApi\HttpException
      */
     protected function executeCurl(array $options)
     {
@@ -251,7 +251,7 @@ class BotApi
      *
      * @param resource $curl
      *
-     * @throws \TelegramBot\Api\HttpException
+     * @throws \YaroslavMolchan\TelegramBotApi\HttpException
      */
     public static function curlValidate($curl)
     {
@@ -269,7 +269,7 @@ class BotApi
      * @param boolean $asArray
      *
      * @return object|array
-     * @throws \TelegramBot\Api\InvalidJsonException
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidJsonException
      */
     public static function jsonValidate($jsonString, $asArray)
     {
@@ -283,7 +283,7 @@ class BotApi
     }
 
     /**
-     * Use this method to send text messages. On success, the sent \TelegramBot\Api\Types\Message is returned.
+     * Use this method to send text messages. On success, the sent \YaroslavMolchan\TelegramBotApi\Types\Message is returned.
      *
      * @param int|string $chatId
      * @param string $text
@@ -293,9 +293,9 @@ class BotApi
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      * @param bool $disableNotification
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function sendMessage(
         $chatId,
@@ -328,8 +328,8 @@ class BotApi
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      * @param bool $disableNotification
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function sendContact(
         $chatId,
@@ -367,7 +367,7 @@ class BotApi
      * @param string $action
      *
      * @return bool
-     * @throws \TelegramBot\Api\Exception
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function sendChatAction($chatId, $action)
     {
@@ -384,8 +384,8 @@ class BotApi
      * @param int $offset
      * @param int $limit
      *
-     * @return \TelegramBot\Api\Types\UserProfilePhotos
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\UserProfilePhotos
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function getUserProfilePhotos($userId, $offset = 0, $limit = 100)
     {
@@ -408,7 +408,7 @@ class BotApi
      *
      * @return string
      *
-     * @throws \TelegramBot\Api\Exception
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function setWebhook($url = '', $certificate = null)
     {
@@ -419,9 +419,9 @@ class BotApi
      * A simple method for testing your bot's auth token.Requires no parameters.
      * Returns basic information about the bot in form of a User object.
      *
-     * @return \TelegramBot\Api\Types\User
-     * @throws \TelegramBot\Api\Exception
-     * @throws \TelegramBot\Api\InvalidArgumentException
+     * @return \YaroslavMolchan\TelegramBotApi\Types\User
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function getMe()
     {
@@ -441,8 +441,8 @@ class BotApi
      * @param int $timeout
      *
      * @return Update[]
-     * @throws \TelegramBot\Api\Exception
-     * @throws \TelegramBot\Api\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function getUpdates($offset = 0, $limit = 100, $timeout = 0)
     {
@@ -471,8 +471,8 @@ class BotApi
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      * @param bool $disableNotification
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function sendLocation(
         $chatId,
@@ -505,8 +505,8 @@ class BotApi
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      * @param bool $disableNotification
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function sendVenue(
         $chatId,
@@ -541,9 +541,9 @@ class BotApi
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      * @param bool $disableNotification
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function sendSticker(
         $chatId,
@@ -574,9 +574,9 @@ class BotApi
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      * @param bool $disableNotification
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function sendVideo(
         $chatId,
@@ -613,9 +613,9 @@ class BotApi
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      * @param bool $disableNotification
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function sendVoice(
         $chatId,
@@ -643,9 +643,9 @@ class BotApi
      * @param int $messageId
      * @param bool $disableNotification
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function forwardMessage($chatId, $fromChatId, $messageId, $disableNotification = false)
     {
@@ -682,9 +682,9 @@ class BotApi
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      * @param bool $disableNotification
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function sendAudio(
         $chatId,
@@ -718,9 +718,9 @@ class BotApi
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      * @param bool $disableNotification
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function sendPhoto(
         $chatId,
@@ -751,9 +751,9 @@ class BotApi
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      * @param bool $disableNotification
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function sendDocument(
         $chatId,
@@ -784,9 +784,9 @@ class BotApi
      *
      * @param $fileId
      *
-     * @return \TelegramBot\Api\Types\File
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\File
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function getFile($fileId)
     {
@@ -800,7 +800,7 @@ class BotApi
      *
      * @return string
      *
-     * @throws \TelegramBot\Api\HttpException
+     * @throws \YaroslavMolchan\TelegramBotApi\HttpException
      */
     public function downloadFile($fileId)
     {
@@ -914,9 +914,9 @@ class BotApi
      * @param bool $disablePreview
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function editMessageText(
         $chatId,
@@ -944,9 +944,9 @@ class BotApi
      * @param string|null $caption
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function editMessageCaption(
         $chatId,
@@ -969,9 +969,9 @@ class BotApi
      * @param int $messageId
      * @param Types\ReplyKeyboardMarkup|Types\ReplyKeyboardHide|Types\ForceReply|null $replyMarkup
      *
-     * @return \TelegramBot\Api\Types\Message
-     * @throws \TelegramBot\Api\InvalidArgumentException
-     * @throws \TelegramBot\Api\Exception
+     * @return \YaroslavMolchan\TelegramBotApi\Types\Message
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function editMessageReplyMarkup(
         $chatId,
@@ -1010,10 +1010,10 @@ class BotApi
     }
 
     /**
-     * @param \TelegramBot\Api\Types\Update $update
+     * @param \YaroslavMolchan\TelegramBotApi\Types\Update $update
      * @param string $eventName
      *
-     * @throws \TelegramBot\Api\Exception
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function trackUpdate(Update $update, $eventName = 'Message')
     {
@@ -1031,10 +1031,10 @@ class BotApi
     /**
      * Wrapper for tracker
      *
-     * @param \TelegramBot\Api\Types\Message $message
+     * @param \YaroslavMolchan\TelegramBotApi\Types\Message $message
      * @param string $eventName
      *
-     * @throws \TelegramBot\Api\Exception
+     * @throws \YaroslavMolchan\TelegramBotApi\Exception
      */
     public function track(Message $message, $eventName = 'Message')
     {

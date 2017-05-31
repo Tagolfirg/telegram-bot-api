@@ -1,12 +1,12 @@
 <?php
 
-namespace TelegramBot\Api;
+namespace YaroslavMolchan\TelegramBotApi;
 
 /**
  * Class BadMethodCallException
  *
  * @codeCoverageIgnore
- * @package TelegramBot\Api
+ * @package YaroslavMolchan\TelegramBotApi
  */
 class BadMethodCallException extends Exception
 {

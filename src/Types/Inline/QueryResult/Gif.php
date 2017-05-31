@@ -1,9 +1,9 @@
 <?php
 
-namespace TelegramBot\Api\Types\Inline\QueryResult;
+namespace YaroslavMolchan\TelegramBotApi\Types\Inline\QueryResult;
 
-use TelegramBot\Api\Types\Inline\InlineKeyboardMarkup;
-use TelegramBot\Api\Types\Inline\InputMessageContent;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InlineKeyboardMarkup;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InputMessageContent;
 
 /**
  * Class InlineQueryResultGif
@@ -11,7 +11,7 @@ use TelegramBot\Api\Types\Inline\InputMessageContent;
  * By default, this animated GIF file will be sent by the user with optional caption.
  * Alternatively, you can provide InputMessageContent to send it instead of the animation.
  *
- * @package TelegramBot\Api\Types\Inline
+ * @package YaroslavMolchan\TelegramBotApi\Types\Inline
  */
 class Gif extends AbstractInlineQueryResult
 {

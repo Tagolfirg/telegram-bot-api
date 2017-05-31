@@ -6,9 +6,9 @@
  * Time: 22:15
  */
 
-namespace TelegramBot\Api\Types\Inline;
+namespace YaroslavMolchan\TelegramBotApi\Types\Inline;
 
-use TelegramBot\Api\BaseType;
+use YaroslavMolchan\TelegramBotApi\BaseType;
 
 class InlineKeyboardMarkup extends BaseType
 {

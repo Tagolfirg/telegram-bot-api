@@ -6,10 +6,10 @@
  * Time: 03:58
  */
 
-namespace TelegramBot\Api\Types\Inline\QueryResult;
+namespace YaroslavMolchan\TelegramBotApi\Types\Inline\QueryResult;
 
-use TelegramBot\Api\Types\Inline\InlineKeyboardMarkup;
-use TelegramBot\Api\Types\Inline\InputMessageContent;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InlineKeyboardMarkup;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InputMessageContent;
 
 class Contact extends AbstractInlineQueryResult
 {

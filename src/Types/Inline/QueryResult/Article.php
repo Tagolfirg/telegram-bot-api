@@ -1,15 +1,15 @@
 <?php
 
-namespace TelegramBot\Api\Types\Inline\QueryResult;
+namespace YaroslavMolchan\TelegramBotApi\Types\Inline\QueryResult;
 
-use TelegramBot\Api\Types\Inline\InlineKeyboardMarkup;
-use TelegramBot\Api\Types\Inline\InputMessageContent;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InlineKeyboardMarkup;
+use YaroslavMolchan\TelegramBotApi\Types\Inline\InputMessageContent;
 
 /**
  * Class InlineQueryResultArticle
  * Represents a link to an article or web page.
  *
- * @package TelegramBot\Api\Types\Inline
+ * @package YaroslavMolchan\TelegramBotApi\Types\Inline
  */
 class Article extends AbstractInlineQueryResult
 {

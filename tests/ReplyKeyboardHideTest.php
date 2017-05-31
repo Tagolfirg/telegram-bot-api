@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Api\Test;
+namespace YaroslavMolchan\TelegramBotApi\Test;
 
-use TelegramBot\Api\Types\ReplyKeyboardHide;
+use YaroslavMolchan\TelegramBotApi\Types\ReplyKeyboardHide;
 
 class ReplyKeyboardHideTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace TelegramBot\Api;
+namespace YaroslavMolchan\TelegramBotApi;
 
 use Closure;
 use ReflectionFunction;
-use TelegramBot\Api\Events\EventCollection;
-use TelegramBot\Api\Types\Update;
+use YaroslavMolchan\TelegramBotApi\Events\EventCollection;
+use YaroslavMolchan\TelegramBotApi\Types\Update;
 
 /**
  * Class Client
  *
- * @package TelegramBot\Api
+ * @package YaroslavMolchan\TelegramBotApi
  */
 class Client
 {
@@ -20,12 +20,12 @@ class Client
     const REGEXP = '/^(?:@\w+\s)?\/([^\s@]+)(@\S+)?\s?(.*)$/';
 
     /**
-     * @var \TelegramBot\Api\BotApi
+     * @var \YaroslavMolchan\TelegramBotApi\BotApi
      */
     protected $api;
 
     /**
-     * @var \TelegramBot\Api\Events\EventCollection
+     * @var \YaroslavMolchan\TelegramBotApi\Events\EventCollection
      */
     protected $events;
 
@@ -47,7 +47,7 @@ class Client
      * @param string $name
      * @param \Closure $action
      *
-     * @return \TelegramBot\Api\Client
+     * @return \YaroslavMolchan\TelegramBotApi\Client
      */
     public function command($name, Closure $action)
     {
@@ -66,7 +66,7 @@ class Client
      * @param \Closure $event
      * @param \Closure|null $checker
      *
-     * @return \TelegramBot\Api\Client
+     * @return \YaroslavMolchan\TelegramBotApi\Client
      */
     public function on(Closure $event, Closure $checker = null)
     {
@@ -83,7 +83,7 @@ class Client
     public function handle(array $updates)
     {
         foreach ($updates as $update) {
-            /* @var \TelegramBot\Api\Types\Update $update */
+            /* @var \YaroslavMolchan\TelegramBotApi\Types\Update $update */
             $this->events->handle($update);
         }
     }
@@ -92,7 +92,7 @@ class Client
      * Webhook handler
      *
      * @return array
-     * @throws \TelegramBot\Api\InvalidJsonException
+     * @throws \YaroslavMolchan\TelegramBotApi\InvalidJsonException
      */
     public function run()
     {

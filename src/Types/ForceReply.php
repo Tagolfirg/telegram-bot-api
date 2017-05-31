@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Api\Types;
+namespace YaroslavMolchan\TelegramBotApi\Types;
 
-use TelegramBot\Api\BaseType;
+use YaroslavMolchan\TelegramBotApi\BaseType;
 
 /**
  * Class ForceReply
@@ -10,7 +10,7 @@ use TelegramBot\Api\BaseType;
  * (act as if the user has selected the bot‘s message and tapped ’Reply').This can be extremely useful
  * if you want to create user-friendly step-by-step interfaces without having to sacrifice privacy mode.
  *
- * @package TelegramBot\Api\Types
+ * @package YaroslavMolchan\TelegramBotApi\Types
  */
 class ForceReply extends BaseType
 {

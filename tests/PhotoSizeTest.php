@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Api\Test;
+namespace YaroslavMolchan\TelegramBotApi\Test;
 
-use TelegramBot\Api\Types\PhotoSize;
+use YaroslavMolchan\TelegramBotApi\Types\PhotoSize;
 
 class PhotoSizeTest extends \PHPUnit_Framework_TestCase
 {
@@ -70,7 +70,7 @@ class PhotoSizeTest extends \PHPUnit_Framework_TestCase
             'height' => 2,
             'file_size' => 3
         ));
-        $this->assertInstanceOf('\TelegramBot\Api\Types\PhotoSize', $photoSize);
+        $this->assertInstanceOf('\YaroslavMolchan\TelegramBotApi\Types\PhotoSize', $photoSize);
         $this->assertAttributeEquals('testFileId1', 'fileId', $photoSize);
         $this->assertAttributeEquals(1, 'width', $photoSize);
         $this->assertAttributeEquals(2, 'height', $photoSize);
@@ -78,7 +78,7 @@ class PhotoSizeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testSetFileSizeException()
     {
@@ -87,7 +87,7 @@ class PhotoSizeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testSetHeightException()
     {
@@ -96,7 +96,7 @@ class PhotoSizeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \TelegramBot\Api\InvalidArgumentException
+     * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
     public function testSetWidthException()
     {
