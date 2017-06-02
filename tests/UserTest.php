@@ -69,6 +69,20 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('iGusev', $item->getUsername());
     }
 
+    public function testSetLanguageCode()
+    {
+        $item = new User();
+        $item->setLanguageCode('en');
+        $this->assertAttributeEquals('en', 'language_code', $item);
+    }
+
+    public function testGetLanguageCode()
+    {
+        $item = new User();
+        $item->setLanguageCode('en');
+        $this->assertEquals('en', $item->getLanguageCode());
+    }
+
     /**
      * @expectedException \YaroslavMolchan\TelegramBotApi\InvalidArgumentException
      */
@@ -84,13 +98,15 @@ class UserTest extends \PHPUnit_Framework_TestCase
             'first_name' => 'Ilya',
             'last_name' => 'Gusev',
             'id' => 123456,
-            'username' => 'iGusev'
+            'username' => 'iGusev',
+            'language_code' => 'en'
         ));
         $this->assertInstanceOf('\YaroslavMolchan\TelegramBotApi\Types\User', $user);
         $this->assertEquals(123456, $user->getId());
         $this->assertEquals('Ilya', $user->getFirstName());
         $this->assertEquals('Gusev', $user->getLastName());
         $this->assertEquals('iGusev', $user->getUsername());
+        $this->assertEquals('en', $user->getLanguageCode());
     }
 
     /**
