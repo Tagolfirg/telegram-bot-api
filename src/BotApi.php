@@ -1080,7 +1080,7 @@ class BotApi
             'providerToken' => $providerToken,
             'startParameter' => $startParameter,
             'currency' => $currency,
-            'prices' => is_null($prices) ? $prices : $prices->toJson(),
+            'prices' => json_encode($prices),
             'photoUrl' => $photoUrl,
             'photoSize' => $photoSize,
             'photoWidth' => $photoWidth,
