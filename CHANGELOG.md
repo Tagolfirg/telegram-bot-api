@@ -2,7 +2,7 @@
 
 All Notable changes to `PHP Telegram Bot Api` will be documented in this file
 
-## v1.0
+## v2.3
 
 ### Added
 - Payments support
