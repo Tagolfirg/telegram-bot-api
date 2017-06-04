@@ -1,6 +1,6 @@
 {
     "name": "yaroslavmolchan/telegram-bot-api",
-    "description": "PHP Wrapper for Telegram Bot API",
+    "description": "PHP Telegram Bot API",
     "keywords": [
         "php",
         "telegram",

@@ -139,7 +139,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email mail@igusev.ru instead of using the issue tracker.
+If you discover any security related issues, please email yaroslav@molchan.me instead of using the issue tracker.
 
 ## Credits
 
