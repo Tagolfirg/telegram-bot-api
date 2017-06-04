@@ -25,10 +25,6 @@ Via Composer
 $ composer require yaroslav-molchan/telegram-bot-api
 ```
 
-## Usage
-
-See example [DevAnswerBot](https://github.com/TelegramBot/DevAnswerBot) (russian).
-
 #### API Wrapper
 ``` php
 $bot = new \YaroslavMolchan\TelegramBotApi\BotApi('YOUR_BOT_API_TOKEN');

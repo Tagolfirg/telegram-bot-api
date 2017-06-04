@@ -68,7 +68,7 @@ class User extends BaseType implements TypeInterface
      *
      * @var string
      */
-    protected $language_code;
+    protected $languageCode;
 
     /**
      * @return string
@@ -145,14 +145,14 @@ class User extends BaseType implements TypeInterface
      */
     public function getLanguageCode()
     {
-        return $this->language_code;
+        return $this->languageCode;
     }
 
     /**
-     * @param string $language_code
+     * @param string $languageCode
      */
-    public function setLanguageCode($language_code)
+    public function setLanguageCode($languageCode)
     {
-        $this->language_code = $language_code;
+        $this->languageCode = $languageCode;
     }
 }

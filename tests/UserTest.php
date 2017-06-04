@@ -73,7 +73,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
     {
         $item = new User();
         $item->setLanguageCode('en');
-        $this->assertAttributeEquals('en', 'language_code', $item);
+        $this->assertAttributeEquals('en', 'languageCode', $item);
     }
 
     public function testGetLanguageCode()
